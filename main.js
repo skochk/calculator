@@ -1,33 +1,16 @@
-let value1 = null;
-let value2 = null;
+let value1 = '';
+let value2 = '';
 let totalvalue = 0;
 
 function addValue (kek){
-    
-    if(value1 !== null){
-        value2 = value2 + kek;
-    }else{
-        value1 = value1 + kek;
-    }
+    value1 = value1 + kek;
+    let textarea = document.getElementById("showArea");
+    textarea.value = textarea.value + kek; 
 }
-
 
 function getValue(){
-    totalvalue = value1 + value2;
-    
-    alert(value1 + " + " + value2 + " = " + totalvalue);
-
+    let textarea = document.getElementById("showArea");
+    textarea.value = eval(value1);
     value1 = 0;
-    value2 = 0;
 }
 
-function difference(){
-    console.log(value2);
-}
-function sum(){
-   delete addValue;
-   function addValue (kek2){
-        value2 = value2 + kek2;
-    }
-
-}
